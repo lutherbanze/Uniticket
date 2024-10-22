@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Avanços no Desenvolvimento do Aplicativo Uniticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Relatório de Avanços no Desenvolvimento do Aplicativo Uniticket</h1>
+
+    <h2>1. Regras de Segurança no Firebase Storage</h2>
+    <p>As regras de segurança no Firebase Storage foram concluídas e ajustadas para garantir maior proteção e controle de acesso. Essas medidas asseguram que somente usuários autorizados possam acessar e modificar dados sensíveis, o que é essencial para a segurança da venda e gerenciamento de bilhetes.</p>
+
+    <h2>2. Fluxo de Disponibilidade de Bilhetes</h2>
+    <p>O fluxo de disponibilidade de bilhetes foi modificado com base na disponibilidade dos carros, considerando a origem da viagem e o limite de bilhetes comprados. Agora, o sistema permite um controle mais eficiente da disponibilidade dos bilhetes, reduzindo o risco de sobrecarga e melhorando a experiência do usuário.</p>
+    <ul>
+        <li><strong>Disponibilidade por Carro</strong>: Para cada origem, o sistema verifica a disponibilidade do carro antes de permitir a compra dos bilhetes.</li>
+        <li><strong>Limite de Bilhetes</strong>: A quantidade de bilhetes disponíveis é limitada, evitando sobrecarregar a capacidade dos veículos.</li>
+    </ul>
+
+    <h2>3. Novas Funcionalidades para Administradores</h2>
+    <ul>
+        <li><strong>Cadastro de Bilhetes</strong>: Agora, o administrador pode cadastrar uma data de partida por origem, e essa data é visível para os usuários.</li>
+        <li><strong>Limitação de Carros por Origem</strong>: O sistema limita a três o número máximo de carros por local de origem, garantindo uma distribuição equilibrada de veículos.</li>
+        <li><strong>Scaneadores</strong>: Cada carro possui um scaneador atribuído, que desempenha funções essenciais como validar bilhetes, atribuir indisponibilidade ao carro e restabelecer a disponibilidade quando necessário.</li>
+        <li><strong>Gerenciamento de Datas</strong>: Administradores agora podem alterar as datas de partida para cada origem, proporcionando flexibilidade no planejamento das viagens.</li>
+        <li><strong>Adição de Scaneadores</strong>: O administrador pode adicionar um ou mais scaneadores por bilhete, garantindo um controle mais robusto e eficaz sobre a validação dos bilhetes e a gestão da disponibilidade dos carros.</li>
+    </ul>
+
+    <h2>4. Funções do Scaneador</h2>
+    <p>O scaneador desempenha um papel crucial na operação do sistema, com as seguintes funções:</p>
+    <ul>
+        <li><strong>Indisponibilidade de Carros</strong>: Quando um carro está indisponível, o scaneador pode registrar essa informação no sistema, impedindo a venda de bilhetes para esse veículo.</li>
+        <li><strong>Validação de Bilhetes</strong>: O scaneador é responsável por validar os bilhetes dos passageiros, garantindo que apenas aqueles com bilhetes válidos embarquem.</li>
+        <li><strong>Restabelecimento de Disponibilidade</strong>: Após a validação e conforme o fluxo de operação, o scaneador pode restabelecer a disponibilidade do carro para novas vendas.</li>
+    </ul>
+
+    
+</body>
+</html>
